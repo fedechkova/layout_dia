@@ -1,0 +1,19 @@
+.what-people-say {
+  &__content {
+    width: 200px;
+    margin-bottom: 85px;
+  }
+
+  &__title {
+    font-size: $fs-title-s;
+    padding-top: 16px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 362px);
+    gap: 30px;
+
+    justify-content: center;
+  }
+}

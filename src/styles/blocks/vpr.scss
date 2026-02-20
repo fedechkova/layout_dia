@@ -1,0 +1,32 @@
+.vpr {
+  padding-block: 72px;
+  background: #fff;
+
+  &__panel {
+    min-height: 547px;
+
+    background-image: url("/src/images/Shapes.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__content {
+    max-width: 754px;
+  }
+
+  &__title {
+    font-size: $fs-title-m;
+  }
+
+  &__text {
+    font-weight: $fw-600;
+    font-size: 24px;
+    padding: 24px 0 64px;
+  }
+}

@@ -1,0 +1,42 @@
+.our-expertise {
+  background-color: #fff;
+  padding: 0;
+  padding-block: 128px 134px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 64px;
+    text-align: center;
+    font-size: $fs-title-m;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 177px;
+  }
+
+  &__item {
+    text-align: center;
+
+    &-title {
+      font-size: 20px;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__image {
+    width: 166px;
+    height: 166px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    border-radius: $border-radius;
+
+    @include hover(transform, translateY(-7px))
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+}

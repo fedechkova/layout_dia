@@ -1,0 +1,60 @@
+.nav {
+  min-width: 0;
+
+  &__list {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    gap: 48px;
+
+    white-space: nowrap;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 20px;
+    font-size: 13px;
+    font-weight: $fw-700;
+    color: $text-on-dark;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:not(.nav__link--accent) {
+      @include hover(color, $accent-color);
+    }
+
+    &--accent {
+      position: relative;
+
+      @include hover(transform, scale(1.15));
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: -1.5px;
+        bottom: -8px;
+        height: 2px;
+        width: 100%;
+        border-radius: 4px;
+        background-color: $accent-color;
+      }
+    }
+  }
+
+  &__item {
+    &--cta {
+      margin-left: 219px;
+    }
+  }
+
+  &--footer {
+    .nav__list {
+      gap: 64px;
+    }
+  }
+}
+

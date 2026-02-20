@@ -1,0 +1,16 @@
+.who-we-are {
+  display: flex;
+  text-align: center;
+
+  &__title {
+    font-size: $fs-title-s;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    max-width: 754px;
+
+    font-weight: $fw-600;
+    font-size: 24px;
+  }
+}

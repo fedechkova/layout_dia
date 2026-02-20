@@ -1,0 +1,12 @@
+.layout {
+  width: 100%;
+
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+
+  &__dark {
+    background: $main-bg-color;
+    height: 800px;
+    width: 100%;
+  }
+}
