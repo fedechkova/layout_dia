@@ -3,14 +3,21 @@
   text-align: center;
 
   &__title {
-    font-size: $fs-title-s;
     margin-bottom: 16px;
+    font-size: $fs-title-s;
   }
 
   &__text {
     max-width: 754px;
-
-    font-weight: $fw-600;
     font-size: 24px;
+    font-weight: $fw-600;
+
+    @include bp(small-desktop) {
+      max-width: 716px;
+    }
+
+    @include bp(mobile) {
+      font-size: 22px;
+    }
   }
 }

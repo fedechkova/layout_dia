@@ -1,57 +1,58 @@
 .process-card {
-  background-color: $color-white;
-  box-shadow: $cards-shadow;
-
-  border-radius: $border-radius;
+  box-sizing: border-box;
+  height: 264px;
   padding: 32px;
+  border-radius: $border-radius;
 
   font-family: $ff-heading;
-  font-weight: $fw-600;
   font-size: 13px;
+  font-weight: $fw-600;
+
+  background-color: $color-white;
+  box-shadow: $cards-shadow;
 
   @include hover(transform, scale(1.04));
 
   &__number {
-    width: 46px;
-    height: 24px;
-
     display: inline-block;
-    text-align: center;
     align-content: center;
 
-    color: $accent-color;
-
-    background-color: rgba(32, 96, 246, 10%);
+    width: 46px;
+    height: 24px;
     border-radius: 23px;
 
+    color: $accent-color;
+    text-align: center;
+
+    background-color: rgba(32, 96, 246, 10%);
   }
 
   &__list {
+    margin: 24px 0 32px;
     padding: 0;
-    margin: 24px 0 32px 0;
-    list-style: none;
-
     font-family: $ff-base;
+    list-style: none;
   }
 
   &__link {
     display: flex;
-    align-items: center;
     column-gap: 16px;
+    align-items: center;
     text-decoration: none;
 
     @include hover(transform, translateX(6px));
 
     &-text {
       font-size: 15px;
-      color: #334563;
       line-height: 1;
+      color: #334563;
+      white-space: nowrap;
     }
   }
 
   &__icon {
-    height: 40px;
     width: 40px;
+    height: 40px;
   }
 }
 
@@ -61,6 +62,13 @@
 
   &:hover {
     transform: translateY(-132px) scale(1.04);
+
+    @include bp(mobile) {
+      transform: none;
+    }
+  }
+
+  @include bp(mobile) {
+    transform: none;
   }
 }
-

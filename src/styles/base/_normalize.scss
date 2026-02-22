@@ -1,5 +1,12 @@
-.page__body {
-  margin: 0;
+.page {
+  &__body {
+    min-width: 320px;
+    margin: 0;
+
+    &:has(.page__menu:target) {
+      overflow: hidden;
+    }
+  }
 }
 
 html {

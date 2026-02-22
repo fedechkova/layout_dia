@@ -1,24 +1,45 @@
 .footer {
-  background: $main-bg-color;
   border-radius: 30px 30px 0 0;
+  background: $main-bg-color;
 
   &__top {
     padding: 180px 0 120px;
+
+    @include bp(mobile) {
+      padding-block: 80px;
+    }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 30px;
+
+    @include bp(tablet) {
+      grid-template-columns: repeat(6, 1fr);
+    }
   }
 
   &__col {
     &--form {
       grid-column: 1 / 6;
+
+      @include bp(tablet) {
+        grid-column: span 4;
+        padding-bottom: 120px;
+      }
+
+      @include bp(mobile) {
+        padding-bottom: 80px;
+      }
     }
 
     &--contacts {
       grid-column: 8 / 12;
+
+      @include bp(tablet) {
+        grid-column: span 4;
+      }
     }
   }
 
@@ -29,15 +50,17 @@
 
   &__input {
     display: block;
+
     width: 100%;
     padding-bottom: 16px;
-    background: transparent;
     border: 0;
     border-bottom: 1px solid $color-white;
-    outline: none;
 
-    color: $text-on-dark;
     font: 15px/1 $ff-heading;
+    color: $text-on-dark;
+
+    background: transparent;
+    outline: none;
 
     &::placeholder {
       color: $text-on-dark;
@@ -56,8 +79,8 @@
   }
 
   &__title {
-    font-size: $fs-title-s;
     padding-bottom: 56px;
+    font-size: $fs-title-s;
     color: $text-on-dark;
   }
 
@@ -67,13 +90,13 @@
   }
 
   &__contact {
-    font-weight: $fw-600;
     font-size: 24px;
+    font-weight: $fw-600;
   }
 
   &__meta {
-    color: $text-on-dark;
     padding-bottom: 8px;
+    color: $text-on-dark;
     opacity: 0.5;
   }
 
@@ -87,8 +110,8 @@
   &__link,
   &__address {
     display: inline-block;
-    text-decoration: none;
     color: #fff;
+    text-decoration: none;
 
     @include hover(transform, translateY(2px));
   }
@@ -102,20 +125,23 @@
   &__nav {
     display: flex;
     align-items: center;
-
+    justify-content: space-between;
     padding-bottom: 80px;
 
-    & .logo {
-      margin-right: 463px;
+    @include bp(tablet) {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: flex-start;
     }
   }
 }
 
-
 .footer__input:-webkit-autofill,
 .footer__input:-webkit-autofill:hover,
 .footer__input:-webkit-autofill:focus {
-  -webkit-text-fill-color: #fff;
+  box-shadow: 0 0 0 1000px #2c2c2c inset;
   caret-color: #fff;
-  box-shadow: 0 0 0px 1000px #2c2c2c inset;
-  }
+
+  -webkit-text-fill-color: #fff;
+}
